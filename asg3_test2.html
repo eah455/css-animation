@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title> Assignment 3: CSS Animation </title>
+	<style>
+		body {
+			background-color: black;
+		}
+		
+		/*
+		@keyframes spin {
+			from {transform: rotateY(0deg);}
+			to {transform: rotateY(360deg);}
+		}
+		*/
+		
+		.container {
+			width: 300px;
+			height: 300px;
+			margin: auto;
+			margin-top: 12%;
+			perspective: 800px;
+			perspective-origin: -50% 50%;
+			transform-style: preserve-3d;
+		}
+		
+		.cube {
+			position: relative;
+			width: 300px;
+			animation: spin 5s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			transition-property: opacity;
+			transition-duration: .5s;
+		}
+		
+		.cube:hover {
+			opacity: 0;
+			animation-play-state: paused;
+		}
+		
+		/*
+		.red, .orange, .yellow, .green, .blue, .purple {
+			transition-property: opacity;
+			transition-duration: .5s;
+		}
+		
+		.red:hover, .orange:hover, .yellow:hover, .green:hover, .blue:hover, .purple:hover {
+			opacity: 0;
+			animation-play-state: paused;
+		}
+		*/
+
+		.red div {
+			position: absolute;
+			width: 300px;
+			height: 300px;
+			background-color: transparent;
+			border: 2px red solid;
+		}
+		
+		.orange div {
+			position: absolute;
+			top: 20px;
+			left: 20px;
+			width: 260px;
+			height: 260px;
+			background-color: transparent;
+			border: 2px orange solid;
+		}
+		
+		.yellow div {
+			position: absolute;
+			top: 40px;
+			left: 40px;
+			width: 220px;
+			height: 220px;
+			background-color: transparent;
+			border: 2px yellow solid;
+		}
+		
+		.green div {
+			position: absolute;
+			top: 60px;
+			left: 60px;
+			width: 180px;
+			height: 180px;
+			background-color: transparent;
+			border: 2px green solid;
+		}
+		
+		.blue div {
+			position: absolute;
+			top: 80px;
+			left: 80px;
+			width: 140px;
+			height: 140px;
+			background-color: transparent;
+			border: 2px blue solid;
+		}
+		
+		.purple div {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			/*
+			top: 100px;
+			left: 100px;
+			background-color: transparent;
+			border: 2px purple solid;
+			*/
+		}
+		
+		.purple .front {
+			transform: translateZ(150px) translateY(-100px) translateX(100px);
+			background-color: transparent;
+			border: 2px purple solid;
+		}
+		
+		.purple .back {
+			transform: translateZ(-150px) rotateY(180deg) translateY(-100px) translateX(100px);
+			background-color: transparent;
+			border: 2px purple solid;
+		}
+		
+		.purple .top {
+			transform: rotateX(-90deg) translateY(-150px) translateY(-100px) translateX(100px);
+			transform-origin: top center;
+			background-color: transparent;
+			border: 2px purple solid;
+		}
+		
+		.purple .bottom {
+			transform: rotateX(90deg) translateY(150px) translateY(-100px) translateX(100px);
+			transform-origin: bottom center;
+			background-color: transparent;
+			border: 2px purple solid;
+		}
+		
+		.purple .left {
+			transform: rotateY(270deg) translateX(-150px) translateY(-100px) translateX(100px);
+			transform-origin: center left;
+			background-color: transparent;
+			border: 2px purple solid;
+		}
+		
+		.purple .right {
+			transform: rotateY(-270deg) translateX(150px) translateY(-100px) translateX(100px);
+			transform-origin:  center right;
+			background-color: transparent;
+			border: 2px purple solid;
+		}
+		
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="cube">
+			<div class="red">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+			<div class="orange">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+			<div class="yellow">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+			<div class="green">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+			<div class="blue">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+			<div class="purple">
+				<div class="front"></div>
+				<div class="back"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
